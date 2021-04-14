@@ -1,6 +1,7 @@
 package designpattern;
 
 import designpattern.singleton.SingletonLazyNormal;
+import designpattern.singleton.SingletonLazySync;
 
 import java.util.HashSet;
 import java.util.concurrent.ExecutorService;
@@ -19,7 +20,7 @@ public class TestPattern {
         for(int i = 0 ; i <20 ; i++) {
             threadpool.execute(new Runnable() {
                 public void run() {
-                    System.out.println(Thread.currentThread().getName()+":"+SingletonLazyNormal.getSingletonInstance().hashCode());
+                    System.out.println(Thread.currentThread().getName()+":"+ SingletonLazySync.getInstance().hashCode());
                 }
             });
 
