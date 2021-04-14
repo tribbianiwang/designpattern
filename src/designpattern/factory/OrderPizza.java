@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 public class OrderPizza {
 
 
+    public OrderPizza(SimpleFactory simpleFactory) {
+        this.simpleFactory = simpleFactory;
+    }
 
     public void startOrderPizza(){
         String orderType;
@@ -44,6 +47,38 @@ public class OrderPizza {
 
 
     }
+
+    private SimpleFactory simpleFactory;
+
+
+    public void setSimpleFactory(SimpleFactory simpleFactory) {
+        this.simpleFactory = simpleFactory;
+    }
+
+    public void StartOrderPizzaSimpleFactory(){
+        String orderType;
+        Pizza pizza = null;
+
+        do {
+            orderType = getType();
+            if(orderType!=null&&orderType!=""){
+
+                pizza = SimpleFactory.createPizzaStatic(orderType);
+
+                if(pizza!=null){
+                    pizza.prepare();
+                    pizza.cut();
+                    pizza.bake();
+                    pizza.box();
+                }
+
+            }
+
+
+        }while (true);
+
+    }
+
 
 
 

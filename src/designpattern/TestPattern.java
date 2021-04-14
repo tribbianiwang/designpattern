@@ -1,6 +1,7 @@
 package designpattern;
 
 import designpattern.factory.OrderPizza;
+import designpattern.factory.SimpleFactory;
 import designpattern.singleton.*;
 
 import java.util.HashSet;
@@ -30,8 +31,12 @@ public class TestPattern {
 //    }
 
         //工厂模式
-        OrderPizza orderPizza = new OrderPizza();
+        OrderPizza orderPizza = new OrderPizza(new SimpleFactory());
+//        orderPizza.startOrderPizza();
+
+//        orderPizza.setSimpleFactory(new SimpleFactory());
         orderPizza.startOrderPizza();
+
 
     }
 
