@@ -1,9 +1,6 @@
 package designpattern;
 
-import designpattern.singleton.SingletonInnerStaticClass;
-import designpattern.singleton.SingletonLazyDoubleCheck;
-import designpattern.singleton.SingletonLazyNormal;
-import designpattern.singleton.SingletonLazySync;
+import designpattern.singleton.*;
 
 import java.util.HashSet;
 import java.util.concurrent.ExecutorService;
@@ -26,7 +23,9 @@ public class TestPattern {
                 }
             });
 
-
+        //单例模式 枚举方式实现
+            SingletonEnum singletonEnum = SingletonEnum.SINGLETON_ENUM;
+            singletonEnum.sayOk();
     }
 
 
