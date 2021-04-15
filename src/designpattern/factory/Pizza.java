@@ -1,6 +1,6 @@
-package designpattern.factory;
+package designpattern.factory.simplefactory;
 
-public class Pizza {
+public abstract class Pizza {
     private String name;
 
     public String getName() {
@@ -11,9 +11,7 @@ public class Pizza {
         this.name = name;
     }
 
-    public void prepare(){
-        System.out.println(name+"is prepare");
-    }
+    public abstract void prepare();
 
     public void bake(){
         System.out.println(name+"is bake");

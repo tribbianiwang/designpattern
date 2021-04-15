@@ -1,12 +1,7 @@
 package designpattern;
 
-import designpattern.factory.OrderPizza;
-import designpattern.factory.SimpleFactory;
-import designpattern.singleton.*;
-
-import java.util.HashSet;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import designpattern.factory.simplefactory.OrderPizza;
+import designpattern.factory.simplefactory.SimpleFactory;
 
 public class TestPattern {
 

@@ -1,10 +1,12 @@
-package designpattern.factory;
+package designpattern.factory.simplefactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import designpattern.factory.simplefactory.Pizza;
 
 public class OrderPizza {
+
 
 
     public OrderPizza(SimpleFactory simpleFactory) {
@@ -57,7 +59,7 @@ public class OrderPizza {
 
     public void StartOrderPizzaSimpleFactory(){
         String orderType;
-        Pizza pizza = null;
+        designpattern.factory.simplefactory.Pizza pizza = null;
 
         do {
             orderType = getType();
