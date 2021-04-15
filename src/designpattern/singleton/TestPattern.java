@@ -1,4 +1,4 @@
-package designpattern;
+package designpattern.singleton;
 
 import designpattern.factory.simplefactory.OrderPizza;
 import designpattern.factory.simplefactory.SimpleFactory;
