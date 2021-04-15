@@ -1,5 +1,7 @@
 package designpattern.factory.simplefactory;
-import designpattern.factory.simplefactory.Pizza;
+
+import designpattern.factory.Pizza;
+
 public class SimpleFactory {
 
     public Pizza createPizza(String orderType){

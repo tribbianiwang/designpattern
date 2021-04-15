@@ -1,8 +1,10 @@
-package designpattern.factory.factorymethod;
+package designpattern.factory.abstractfactory;
 
 import designpattern.factory.Pizza;
+import designpattern.factory.factorymethod.LdCheesePizza;
+import designpattern.factory.factorymethod.LdPepperPizza;
 
-public class LdOrderPizza extends OrderPizza{
+public class LDFactory extends AbstractFactory{
     @Override
     public Pizza createPizza(String orderType) {
         Pizza pizza = null;
@@ -16,6 +18,6 @@ public class LdOrderPizza extends OrderPizza{
             }
         }
         return pizza;
-    }
 
+    }
 }

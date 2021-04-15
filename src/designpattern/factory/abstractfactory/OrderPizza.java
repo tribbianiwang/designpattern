@@ -1,4 +1,4 @@
-package designpattern.factory.factorymethod;
+package designpattern.factory.abstractfactory;
 
 import designpattern.factory.Pizza;
 
@@ -6,10 +6,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public abstract class OrderPizza {
+public class OrderPizza {
 
-    public abstract Pizza createPizza(String orderType);
+    private AbstractFactory pizzaFactory;
 
+    public OrderPizza(AbstractFactory pizzaFactory) {
+        this.pizzaFactory = pizzaFactory;
+    }
 
     public void startOrderPizza(){
         String orderType;
@@ -18,7 +21,7 @@ public abstract class OrderPizza {
         do {
             orderType = getType();
             if(orderType!=null&&orderType!=""){
-                 pizza =createPizza(orderType);
+                pizza =pizzaFactory.createPizza(orderType);
                 if(pizza!=null){
                     pizza.prepare();
                     pizza.cut();

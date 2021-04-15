@@ -1,4 +1,4 @@
-package designpattern.factory.simplefactory;
+package designpattern.factory;
 
 public abstract class Pizza {
     private String name;

@@ -1,11 +1,10 @@
-package designpattern.factory.factorymethod;
+package designpattern.factory.abstractfactory;
 
-import designpattern.factory.simplefactory.CheesePizza;
-import designpattern.factory.simplefactory.GreekPizza;
-import designpattern.factory.simplefactory.PepperPizza;
 import designpattern.factory.Pizza;
+import designpattern.factory.factorymethod.BJCheesePizza;
+import designpattern.factory.factorymethod.BJPepperPizza;
 
-public class BjOrderPizza extends OrderPizza{
+public class BJFactory extends AbstractFactory{
     @Override
     public Pizza createPizza(String orderType) {
         Pizza pizza = null;
@@ -20,5 +19,4 @@ public class BjOrderPizza extends OrderPizza{
         }
         return pizza;
     }
-
 }

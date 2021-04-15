@@ -1,6 +1,8 @@
 package designpattern.factory.simplefactory;
 
-public class GreekPizza extends Pizza{
+import designpattern.factory.Pizza;
+
+public class GreekPizza extends Pizza {
 
 
     @Override

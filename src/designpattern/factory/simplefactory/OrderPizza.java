@@ -3,7 +3,7 @@ package designpattern.factory.simplefactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import designpattern.factory.simplefactory.Pizza;
+import designpattern.factory.Pizza;
 
 public class OrderPizza {
 
@@ -59,7 +59,7 @@ public class OrderPizza {
 
     public void StartOrderPizzaSimpleFactory(){
         String orderType;
-        designpattern.factory.simplefactory.Pizza pizza = null;
+        Pizza pizza = null;
 
         do {
             orderType = getType();
