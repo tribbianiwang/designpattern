@@ -1,12 +1,14 @@
-package designpattern.prototype;
+package designpattern.prototype.normal;
 
 public class Sheep {
     private int age;
     private String name;
+    private String color;
 
-    public Sheep(int age, String name) {
+    public Sheep(int age, String name,String color) {
         this.age = age;
         this.name = name;
+        this.color = color;
     }
 
     public int getAge() {
@@ -25,11 +27,21 @@ public class Sheep {
         this.name = name;
     }
 
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public String toString() {
         return "Sheep{" +
                 "age=" + age +
                 ", name='" + name + '\'' +
+                ", color='" + color + '\'' +
                 '}';
     }
 }
